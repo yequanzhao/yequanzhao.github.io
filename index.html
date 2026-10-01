@@ -89,7 +89,8 @@ p{margin:0 0 12px;max-width:68ch}
 .theme p{font-size:var(--s-sm);color:var(--muted);margin:0}
 .theme{padding:16px}
 .theme .shot{display:block;background:#fff;border:1px solid var(--line);border-radius:4px;max-width:100%;overflow:hidden;padding:6px;box-sizing:border-box}
-.theme .shot img{width:100%;height:auto;max-height:300px;object-fit:contain;display:block}
+.theme .shot img{width:80%;height:auto;display:block;margin-inline:auto}
+@media (max-width:560px){.theme .shot img{width:100%}}
 .theme p b{color:var(--ink);font-weight:600}
 .theme .go{font-family:var(--f-mono);font-size:var(--s-xs);margin-top:auto;padding-top:8px;border-top:1px dashed var(--line)}
 .apps{list-style:none;margin:4px 0 14px;padding:0;display:flex;flex-direction:column;gap:8px;max-width:72ch}
@@ -164,7 +165,6 @@ footer .in{max-width:1120px;margin:0 auto;padding-inline:20px;padding-block:18px
     <div class="avatar"><img src="images/photo.jpg" alt="Yequan Zhao"></div>
     <div>
       <p class="p-name">Yequan Zhao</p>
-      <p class="p-zh">赵业权 · Kevin</p>
     </div>
     <p class="p-role">Ph.D. Student, Electrical &amp; Computer Engineering<br>University of California, Santa Barbara</p>
     <ul class="p-links">
@@ -181,7 +181,7 @@ footer .in{max-width:1120px;margin:0 auto;padding-inline:20px;padding-block:18px
     <section id="about">
       <h2>About</h2>
       <p class="lead">I am a Ph.D. student in ECE at UC Santa Barbara, advised by <a href="https://web.ece.ucsb.edu/~zhengzhang/" target="_blank" rel="noopener">Prof. Zheng Zhang</a>. I work on memory- and energy-efficient training.</p>
-      <p>My core direction is <b>back-propagation-free (BP-free) training</b>: gradients are estimated from forward passes alone (zeroth-order optimization), which makes <b>on-device training a plug-in over an inference accelerator</b>: a training engine needs little more than the inference engine already on the chip. This removes activation storage and the backward graph, and stays robust under low precision. I apply it to:</p>
+      <p>My core direction is <b>back-propagation-free (BP-free) training</b>: gradients are estimated from forward passes alone (zeroth-order optimization), which makes <b>on-device training a plug-in over an inference accelerator</b>: a training engine needs little more than the inference engine already on the chip. I apply it to:</p>
       <ul class="apps">
         <li><span class="app">MCU</span><span>Full-model quantized training on microcontrollers with 256 KB–1 MB SRAM. <a href="https://doi.org/10.1145/3745772" target="_blank" rel="noopener">Poor Man's Training on MCUs</a> (TODAES 2025)</span></li>
         <li><span class="app">LLM</span><span>Low-bit (INT8/INT4) zeroth-order fine-tuning of large language models. <a href="https://arxiv.org/abs/2502.12346" target="_blank" rel="noopener">QuZO</a> (EMNLP 2025)</span></li>
@@ -197,13 +197,13 @@ footer .in{max-width:1120px;margin:0 auto;padding-inline:20px;padding-block:18px
           <a class="go" href="https://arxiv.org/abs/2605.22869" target="_blank" rel="noopener">NeurIPS 2026 →</a>
         </article>
         <article class="theme">
-          <a class="shot" href="https://doi.org/10.1145/3745772" target="_blank" rel="noopener"><img src="images/mcu.jpg" alt="BP-free training framework: a quantized inference engine converted into a training engine" loading="lazy"></a>
+          <a class="shot" href="https://doi.org/10.1145/3745772" target="_blank" rel="noopener"><img src="images/mcu.jpg" alt="(a) MCU BP-free training framework and (b) training memory comparison" loading="lazy"></a>
           <h4>BP-free training on MCUs</h4>
           <p><b>TL;DR</b> Add a control unit and repeated forward passes to a quantized inference engine and it becomes a training engine. Full-model training fits in 1 MB SRAM (sparse: 256 KB) and matches BP accuracy.</p>
           <a class="go" href="https://doi.org/10.1145/3745772" target="_blank" rel="noopener">ACM TODAES 2025 →</a>
         </article>
         <article class="theme">
-          <a class="shot" href="https://doi.org/10.1145/3837864" target="_blank" rel="noopener"><img src="images/optical.jpg" alt="Architecture of the BP-free optical training accelerator built on tensorized photonic tensor cores" loading="lazy"></a>
+          <a class="shot" href="https://doi.org/10.1145/3837864" target="_blank" rel="noopener"><img src="images/optical.jpg" alt="(a) BP-free optical training accelerator and (b) TONN space-multiplexing architecture" loading="lazy"></a>
           <h4>BP-free optical PINN training</h4>
           <p><b>TL;DR</b> A sparse-grid Stein estimator removes BP from the PINN loss, and tensor-train ZO training keeps the search space small. Together they enable real-size PINN training on photonic tensor cores.</p>
           <a class="go" href="https://doi.org/10.1145/3837864" target="_blank" rel="noopener">ACM TODAES 2026 →</a>
