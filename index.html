@@ -191,10 +191,10 @@ footer .in{max-width:1120px;margin:0 auto;padding-inline:20px;padding-block:18px
 
       <div class="themes">
         <article class="theme">
-          <a class="shot" href="https://arxiv.org/abs/2605.22869" target="_blank" rel="noopener"><img src="images/fura.jpg" alt="FuRA replaces each linear layer with a block tensor-train factorization W = L S R" loading="lazy"></a>
+          <a class="shot" href="https://yequanzhao.github.io/FuRA/" target="_blank" rel="noopener"><img src="images/fura.jpg" alt="FuRA replaces each linear layer with a block tensor-train factorization W = L S R" loading="lazy"></a>
           <h4>FuRA: full-rank PEFT</h4>
           <p><b>TL;DR</b> <b>LoRA-level cost, Full-FT-level performance</b> (+1.37 over Full FT on LLaMA-3-8B). Each layer is factored as W = L·S·R with L fixed to the pretrained SVD basis; training only S and R gives full-rank, spectrally preconditioned updates.</p>
-          <a class="go" href="https://arxiv.org/abs/2605.22869" target="_blank" rel="noopener">NeurIPS 2026 →</a>
+          <div class="go"><a href="https://arxiv.org/abs/2605.22869" target="_blank" rel="noopener">NeurIPS 2026 →</a> · <a href="https://yequanzhao.github.io/FuRA/" target="_blank" rel="noopener">Project page →</a></div>
         </article>
         <article class="theme">
           <a class="shot" href="https://doi.org/10.1145/3745772" target="_blank" rel="noopener"><img src="images/mcu.jpg" alt="(a) MCU BP-free training framework and (b) training memory comparison" loading="lazy"></a>
@@ -214,7 +214,7 @@ footer .in{max-width:1120px;margin:0 auto;padding-inline:20px;padding-block:18px
     <section id="news">
       <h2>News</h2>
       <ul class="news">
-        <li><time>2026.09</time><span>🎉 <b>FuRA</b> is accepted by <span class="hl">NeurIPS 2026</span>.</span></li>
+        <li><time>2026.09</time><span>🎉 <b>FuRA</b> is accepted by <span class="hl">NeurIPS 2026</span>. <a href="https://yequanzhao.github.io/FuRA/">Project page</a> · <a href="https://github.com/yequanzhao/FuRA">Code</a>.</span></li>
         <li><time>2026.08</time><span>🎉 <b>Muon²</b> is accepted by EMNLP 2026 as an <span class="hl">Oral</span> presentation.</span></li>
         <li><time>2026</time><span>🏆 Received the <b>ACM TODAES Rookie Author of the Year</b> award.</span></li>
         <li><time>2026</time><span>🏆 Received the <b>UCSB ECE Wallace Kou Graduate Fellowship</b>.</span></li>
@@ -267,7 +267,7 @@ footer .in{max-width:1120px;margin:0 auto;padding-inline:20px;padding-block:18px
             <div>
               <a class="t" href="https://arxiv.org/abs/2605.22869" target="_blank" rel="noopener"><span class="star">★</span>FuRA: Full-Rank Parameter-Efficient Fine-Tuning with Spectral Preconditioning</a>
               <div class="au"><b>Yequan Zhao</b>, Ruijie Zhang, Liyan Tan, Niall Moran, Tong Qin, Zheng Zhang</div>
-              <div class="meta"><i>Advances in Neural Information Processing Systems</i><a href="https://arxiv.org/pdf/2605.22869" target="_blank" rel="noopener">Paper</a><a href="https://github.com/olokevin/FuRA-NIPS" target="_blank" rel="noopener">Code</a></div>
+              <div class="meta"><i>Advances in Neural Information Processing Systems</i><a href="https://arxiv.org/pdf/2605.22869" target="_blank" rel="noopener">Paper</a><a href="https://yequanzhao.github.io/FuRA/" target="_blank" rel="noopener">Project</a><a href="https://github.com/yequanzhao/FuRA" target="_blank" rel="noopener">Code</a></div>
               <div class="tldr">Freezes the pretrained block-wise SVD basis inside a full-rank tensor-train update: LoRA-level memory and step time, beats Full FT on LLM fine-tuning, RL for math reasoning and VLM instruction tuning; 4-bit QFuRA beats QLoRA.</div>
             </div>
           </li>
